@@ -1,3 +1,4 @@
+const { readFile } = require('./helpers/handleFiles');
 const { showMenu, pause } = require('./helpers/handlerOutput');
 
 // colores para la consola
@@ -11,6 +12,14 @@ const main = async () => {
     
     // Variable para almacenar la opción seleccionada por el usuario
     let option = '';
+
+    // Lectura del archivo 'rates.txt'. Este archivo contiene las reglas
+    // para días, horarios y tarifas.
+    const dataRates = readFile('./src/db/rates.txt');
+
+    // Lectura del archivo 'input.txt'. Este archivo contiene las entradas
+    // de los días y horas trabajadas de los empleados.
+    const dataInput = readFile('./src/db/input.txt');
 
     // Ciclo iterativo para mostrar el menú, la aplicación finalizará
     // con la tecla '0'
@@ -30,6 +39,9 @@ const main = async () => {
         switch (option) {
             case '1':
                 // Read file and calculate salaries
+                if(dataInput){
+                    console.log(dataInput);
+                }
             break;
             case '2':
                 // Read data and calculate salaries
@@ -38,7 +50,10 @@ const main = async () => {
                 // Show salaries calculated
             break;
             case '4':
-                // Show value by day and time.
+                // Show value by day and time.               
+                if(dataRates){
+                    console.log(dataRates);
+                }
             break;
         }
 
