@@ -27,11 +27,17 @@ __Salida:__ indique cuánto se le debe pagar al empleado
 #### Caso 1:
 
 __ENTRADA:__ RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00
+
+<br>
+
 __SALIDA:__ El monto a pagar por RENE es: 215 USD
 
 #### Caso 2:
 
 __ENTRADA:__ ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00
+
+<br>
+
 __SALIDA:__ El monto a pagar ASTRID es: 85 USD
 
 ---
@@ -146,7 +152,7 @@ Se ha creado un menú con 4 opciones como se muestra a continuación:
 
 <br>
 
-__Opción 1:__ Esta opción le permite al usuario leer el archivo de texto ubicado en el directorio `db/input.txt` y hacer el cálculo de los salarios correspondientes a los empleados de cada entrada del archivo. La salida de esta opción se muestra a continuación:
+__Opción 1 del menu:__ Esta opción le permite al usuario leer el archivo de texto ubicado en el directorio `db/input.txt` y hacer el cálculo de los salarios correspondientes a los empleados de cada entrada del archivo. La salida de esta opción se muestra a continuación:
 
 <p align="center">
   <img alt="Resultado de la opción 1" src="https://github.com/bryanAguilar001/salary-console-app/blob/main/media/menu_opt1.png?raw=true" width="400" />
@@ -206,13 +212,11 @@ Fecha Fin  : 2021-12-16T17:00:00.000Z
 
 ```json
 {
-    ....
     "SA":{
         "00:01 - 09:00":30,
         "09:01 - 18:00":20,
         "18:01 - 00:00":25
     }
-    ...
 }
 ```
 
@@ -242,19 +246,19 @@ Payment for the day SA is: 20 USD for 3 hours. Total: 60 USD
 The amount to pay LUIS is: 60 USD
 ```
 
-__Opción 2:__ Esta opción le permite al usuario ingresar una cadena de texto en el mismo formato que el archivo para hacer el cálculo de los salarios. Para ingresar más de un registro, se requiere que el operador de separación sea `|`. Por ejemplo:
+__Opción 2 del menu:__ Esta opción le permite al usuario ingresar una cadena de texto en el mismo formato que el archivo para hacer el cálculo de los salarios. Para ingresar más de un registro, se requiere que el operador de separación sea `|`. Por ejemplo:
 
 ```
 LUIS=SA14:00-17:00|JUAN=SA14:00-17:00,MO10:00-12:00
 ```
 
-__Opción 3:__ Esta opción le permite al usuario observar de manera detallada los días, horas y tarifas establecidas. Como se muestra a continuación.
+__Opción 3 del menu:__ Esta opción le permite al usuario observar de manera detallada los días, horas y tarifas establecidas. Como se muestra a continuación.
 
 <p align="center">
   <img alt="Resultado de la opción 3" src="https://github.com/bryanAguilar001/salary-console-app/blob/main/media/menu_opt3.png?raw=true" width="400" />
 </p>
 
-__Opción 0:__ Esta opción le permite al usuario finalizar la aplicación.
+__Opción 0  del menu:__ Esta opción le permite al usuario finalizar la aplicación.
 
 <p align="center">
   <img alt="Resultado de la opción 0" src="https://github.com/bryanAguilar001/salary-console-app/blob/main/media/menu_opt0.png?raw=true" width="400" />
