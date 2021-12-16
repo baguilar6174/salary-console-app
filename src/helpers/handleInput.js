@@ -19,7 +19,7 @@ const read = (message) => {
         });
 
         // Mostrar información al usuario
-        readLine.question(`\n${message}\n`, (value) => {
+        readLine.question(`\n${message}`, (value) => {
             readLine.close();
             resolve(value);
         });

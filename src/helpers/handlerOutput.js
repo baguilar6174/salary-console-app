@@ -24,8 +24,7 @@ const showMenu = () => {
         // Opciones del menú
         console.log(`${'1.'.green} Read file and calculate salaries.`);
         console.log(`${'2.'.green} Enter data and calculate salaries.`);
-        console.log(`${'3.'.green} Show calculated salaries.`);
-        console.log(`${'4.'.green} Show value by day and time.`);
+        console.log(`${'3.'.green} Show value by day and time.`);
         console.log(`${'0.'.green} Exit.\n`);
 
         // Interfaz utilizada para mostrar y recibir información del usuario

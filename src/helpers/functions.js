@@ -17,6 +17,7 @@ const calculateSalary = (employee) => {
     const name = getName(employee);
     // Se obtienen los datos de los días y horas trabajadas
     let ranges = employee.split('=')[1];
+
     // Se genera una lista con cada uno de los días y horas
     let schedules = ranges.split(',');
     // Esta variable almacena el sueldo total del empleado
@@ -24,6 +25,9 @@ const calculateSalary = (employee) => {
 
     // Se recorren cada uno de los elementos de días y horas
     schedules.forEach((schedule) => {
+
+        // En el caso de que una entrada tenga un formato incorrecto
+        if(schedule.length < 12) return;
         
         // Se obtiene el nombre del día y el horario laboral
         let {day, time} = getDayAndSchedule(schedule);
@@ -156,8 +160,18 @@ const getWorkingHours = (start, end) => {
 }
 
 /**
+ * Función para una validación rádipa de la entrada
+ * @param {string} text 
+ * @returns {boolean} true | false
+ */
+const quickValidation = (text) => {
+    return text.includes('=') && text.includes(':') ? true : false;
+}
+
+/**
  * Exportación de funciones
  */
 module.exports = {
+    quickValidation,
     calculateSalary,
 }
