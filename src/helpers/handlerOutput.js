@@ -70,9 +70,23 @@ const pause = () => {
 }
 
 /**
+ * Esta función muestra los días, horarios y tarifas al usuario en un formato amigable.
+ * @param {object} rates 
+ */
+const formatRates = (rates) => {
+    Object.keys(rates).forEach((day) => {
+        console.log(`\n============= `.green+`Day: ${day}`.bold.white+ ` =============\n`.green);
+        Object.keys(rates[day]).forEach((time) => {
+            console.log(`Schedule `.cyan+ `${time}`.green + ` → `.white + `Price `.cyan+ `${rates[day][time]}$`.blue);
+        });
+    });
+}
+
+/**
  * Exportación de funciones
  */
 module.exports = {
     showMenu,
-    pause
+    pause,
+    formatRates
 }

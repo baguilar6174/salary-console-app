@@ -1,5 +1,6 @@
 const { readFile } = require('./helpers/handleFiles');
-const { showMenu, pause } = require('./helpers/handlerOutput');
+const { read } = require('./helpers/handleInput');
+const { showMenu, pause, formatRates } = require('./helpers/handlerOutput');
 
 // colores para la consola
 require('colors');
@@ -45,14 +46,17 @@ const main = async () => {
             break;
             case '2':
                 // Read data and calculate salaries
+                const input = await read('Write your data: ');
+                console.log(`\n Your data is: ${input}`);
             break;
             case '3':
                 // Show salaries calculated
             break;
             case '4':
-                // Show value by day and time.               
+                // Mostrar los días, horarios y tarifas al usuario en un
+                // formato amigable.
                 if(dataRates){
-                    console.log(dataRates);
+                    formatRates(dataRates)
                 }
             break;
         }
