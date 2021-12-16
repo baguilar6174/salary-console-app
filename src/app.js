@@ -1,3 +1,4 @@
+const { calculateSalary } = require('./helpers/functions');
 const { readFile } = require('./helpers/handleFiles');
 const { read } = require('./helpers/handleInput');
 const { showMenu, pause, formatRates } = require('./helpers/handlerOutput');
@@ -39,9 +40,21 @@ const main = async () => {
         // Manejo de la acción dependiendo de la elección del usuario
         switch (option) {
             case '1':
-                // Read file and calculate salaries
+                // Si se ha leido el archivo y se han encontrado valores, es posible realizar el cálculo
                 if(dataInput){
-                    console.log(dataInput);
+                    // Se obtiene una lista con los datos de cada empleado
+                    const employees = dataInput.split('\n');
+                    console.log(`\n====================== Result ================================\n`.yellow)
+                    employees.forEach(employee => {
+                        // Validación en caso de que la última fila del archivo este vacía
+                        if(employee?.length) {
+                            // Se calcula el salario para cada empleado
+                            calculateSalary(employee);
+                            console.log(`\n===============================================================`.yellow)
+                        }
+                    });                    
+                } else {
+                    console.log(`\nThe file does not exist or is empty!`.red.bold);
                 }
             break;
             case '2':
@@ -57,6 +70,8 @@ const main = async () => {
                 // formato amigable.
                 if(dataRates){
                     formatRates(dataRates)
+                }  else {
+                    console.log(`\nThe file does not exist or is empty!`.red.bold);
                 }
             break;
         }
