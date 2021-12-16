@@ -18,5 +18,8 @@
   "homepage": "https://github.com/bryanAguilar001/salary-console-app#readme",
   "dependencies": {
     "colors": "^1.4.0"
+  },
+  "devDependencies": {
+    "jest": "^27.4.5"
   }
 }

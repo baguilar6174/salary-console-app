@@ -75,6 +75,7 @@ const calculateSalary = (employee) => {
     });
     // Mensaje con el nombre del empleado y el valor a pagar
     console.log(`\nThe amount to pay ${name} is: ${total} USD`.cyan);
+    return total;
 }
 
 /**
@@ -172,6 +173,12 @@ const quickValidation = (text) => {
  * Exportación de funciones
  */
 module.exports = {
-    quickValidation,
     calculateSalary,
+    getName,
+    getDayAndSchedule,
+    getTime,
+    getHourMinutes,
+    getDateFromTime,
+    getWorkingHours,
+    quickValidation
 }

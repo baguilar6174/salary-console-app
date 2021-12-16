@@ -43,7 +43,7 @@ const main = async () => {
                 // Si se ha leido el archivo y se han encontrado valores, es posible realizar el cálculo
                 if(dataInput){
                     // Se obtiene una lista con los datos de cada empleado
-                    const employees = dataInput.split('\n');
+                    const employees = dataInput.split(/\r?\n/);
                     console.log(`\n====================== Result ================================\n`.yellow)
                     employees.forEach(employee => {
                         // Validación en caso de que la última fila del archivo este vacía

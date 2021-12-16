@@ -48,6 +48,7 @@ La aplicación cuenta con la siguiente estructura de directorios y archivos
     │   ├── rates.txt
     │   helpers/
     │   ├── functions.js
+    │   ├── functions.test.js
     │   ├── handleFiles.js
     │   ├── handleInput.js
     │   ├── handlerOutput.js
@@ -111,6 +112,7 @@ La aplicación cuenta con la siguiente estructura de directorios y archivos
     ```
     Además, de dicha función contiene otras funciones internas que se usan para realizar este cálculo.
 
+    * El fichero `functions.test.js` contiene las pruebas o test de cada una de las funciones del fichero `functions.test.js`
     * El fichero `handleFiles.js` contiene funciones para el manejo de archivos tales como lectura y escritura de archivos. La función encargada de leer los archivos de texto del directorio `db` es la siguiente
     ```js
     /**
@@ -132,7 +134,7 @@ La aplicación cuenta con la siguiente estructura de directorios y archivos
 
 Para resolver este problema se ha hecho uso de `Node.js` basado en el lenguaje de programación `JavaScript` ya que poseen las características sufucientes para dar solución a este problema; cuenta con librerías de lectura y escritura de archivos, además provee la posibilidad de crear aplicaciones por consola.
 
-Se ha hecho uso de la extensión [colors](https://www.npmjs.com/package/colors) para brindar personalizar los colores de los mensajes en consola.
+Se ha hecho uso de la extensión [colors](https://www.npmjs.com/package/colors) para brindar personalizar los colores de los mensajes en consola. Además, de la extensión de [jest](https://jestjs.io/) para testing.
 
 Se ha creado un menú con 4 opciones como se muestra a continuación:
 
@@ -298,6 +300,10 @@ Se ha hecho uso de Javascript ya que es un lenguaje muy flexible y mayormente us
 
 5. Funcionalidad completa del menu de opciones
 
+<br>
+
+6. Creación de pruebas unitarias para evaluar todas las funciones del fichero `functions.js`
+
 ## Instalación y ejecución
 
 Esta aplicación ha sido creada con Node en su versión `v14.17.6` y Javascript.
@@ -326,9 +332,18 @@ Para ejecutar la aplicación ejecute el siguiente comando en la raíz del proyec
 node src/app.js
 ```
 
+Paso 4
+
+Para ejecutar los test del fichero `functions.test.js` ejecute el siguiente comando en la raíz del proyecto:
+
+```
+npm run test
+```
+
 ## Librerías & Paquetes usados
 
 - `colors: ^1.4.0`: Permite personalizar los colores en los mensajes mostrados al usuario por consola.
+- `jest: ^27.4.5`: Dependencia de desarrollo que permite generar pruebas o test.
 
 ## Author
 
